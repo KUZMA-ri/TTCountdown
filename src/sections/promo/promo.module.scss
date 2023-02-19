@@ -1,0 +1,65 @@
+.promo {
+    position: relative;
+    font-family: var(--font-Poppins);
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    padding-top: 60px;
+
+    &__leftWave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 450px;
+        max-height: 470px;
+    }
+
+    &__rightWave {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 270px;
+        max-height: 330px;
+    }
+
+    &__container {
+        max-width: 1700px;
+        height: 100vh;
+        margin: 0 auto;
+        padding-bottom: 160px;
+    }
+
+    &__logo {
+        text-align: center;
+        margin-bottom: 92px;
+    }
+
+    &__logoIcon {
+        width: 60px;
+        height: 60px;
+        margin-right: 16px;
+    }
+
+    &__logoName {
+        max-width: 113px;
+        max-height: 47px;
+    }
+
+    &__descBtn {
+        display: block;
+        font-family: var(--font-Poppins);
+        font-weight: 400;
+        font-size: var(--font-18);
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    &__btnWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

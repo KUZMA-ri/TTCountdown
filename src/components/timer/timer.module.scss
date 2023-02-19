@@ -1,0 +1,68 @@
+.timer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 72px;
+
+    &__timeWrapper {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 21px;
+    }
+
+    &__time {
+        font-style: normal;
+        font-weight: 600;
+        font-size: var(--fs-72);
+        line-height: 100%;
+        color: var(--text-dark);
+        margin-right: 30px;
+    }
+
+    &__colon {
+        font-style: normal;
+        font-weight: 600;
+        font-size: var(--fs-72);
+        line-height: 100%;
+        color: var(--text-dark);
+    }
+
+    &__nameWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__daysWrap,
+    &__hoursWrap,
+    &__minutesWrap,
+    &__secondsWrap {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem;
+        width: 170px;
+    }
+
+
+    &__name {
+        position: relative;
+        font-weight: 400;
+        font-size: var(--fs-16);
+        line-height: 100%;
+        color: #FFFFFF;
+        min-width: 100px;
+        margin: 0 42px;
+        z-index: 2;
+
+        &::before {
+            content: url('../../images/timer/red-wave.svg');
+            position: absolute;
+            transform: translate(-27%, -34%);
+            z-index: -1;
+        }
+    }
+}
