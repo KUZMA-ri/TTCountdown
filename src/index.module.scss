@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto&display=swap');
 
+@font-face {
+    font-family: 'SFProDisplay';
+    src: local('SFProDisplay'),
+        url('./fonts/SFPRODISPLAYMEDIUM.OTF') format('truetype');
+    font-weight: bold;
+}
+
 :root {
     --text-light: rgba(22,44,78,.39);
     --text-white: #fff;
@@ -47,26 +54,35 @@ a {
     text-decoration: none;
 }
 
-// --------------------------------------------------------------------------------------------------------
-// Breakpoints
-// --------------------------------------------------------------------------------------------------------
-$breakpoints: ( 
-    sm: 560px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-);
+li {
+    list-style: none;
+}
 
-// media queries mixins
-@mixin breakpoint($screen-size) {
-    @if map-has-key($breakpoints, $screen-size) {
-        @media (max-width: map-get($breakpoints, $screen-size)) {
-            @content;
-        }
-    }
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom,  #162C4E, #030f16,  #162C4E);
+    border-radius: 9em;
+}
 
-    @else {
-    // Debugging
-        @error "`#{$screen-size}` has not been declared as a breakpoint."
-    }
+// ----------------------------------------------------------------------------------
+/* lg */
+@media (max-width: 1200px){
+
+}
+/* md */
+@media (max-width: 992px){
+
+
+}
+/* sm */
+@media (max-width: 768px){
+
+}
+/* xs */
+@media (max-width: 560px){
+
+    
 }

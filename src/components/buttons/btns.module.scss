@@ -13,6 +13,11 @@
         width: 20px;
         height: 20px;
         margin-left: 30px;
+        transition: all 0.8s;
+    }
+
+    &:hover::after {
+        transform: translateX(20px);
     }
 
     &:hover {

@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Modal from '../modal/Modal';
 import Arrow from '../../images/arrow.svg';
 import styles from './form.module.scss';
 
-const Form = () => {
+const Form = ({setModalActive, sendStatus, setSendStatus, setSuccessModal}) => {
     const [email, setEmail] = useState('');
     const [emailInvalid, setEmailInvalid] = useState(false);
     const [emailError, setEmailError] = useState("Field must not be empty");
     const [validForm, setValidForm] = useState(false);
-    const [sendStatus, setSendStatus] = useState(0);
-    const [modalActive, setModalActive] = useState(false);
 
-    console.log(modalActive);
-    
     useEffect(() => {
         if(emailError) {
             setValidForm(false);
         } else {
             setValidForm(true);
         }
+        
+        if((sendStatus >= 200) && (sendStatus < 300)) {
+            setSuccessModal(true);
+        } else {
+            setSuccessModal(false);
+        }
     });
-
+    
     const blurHandler = (e) => {                        // при покидании курсора с поля ввода
         setEmailInvalid(true)
     }
@@ -59,22 +60,16 @@ const Form = () => {
             .then((response) => {
                 const data = response.data;
                 const statusData = response.status;
-
-                if(statusData >= 200 && statusData < 300) {             // получаем статус отправления
-                    setModalActive(true);
-                    console.log('ok');
-                } else {
-                    setModalActive(false);
-                }
-
                 setSendStatus(statusData);
             })
             .catch((error) => {
                 console.log(error);
-            });
+            })
 
+        setModalActive(true);
         setEmail('');
     }
+
 
     return (
             <form className={styles.form}>
@@ -101,7 +96,6 @@ const Form = () => {
                     <p className={styles.form__errorMessage}>{emailError}</p>
                 )}
             </form>
-
     )
 }
 

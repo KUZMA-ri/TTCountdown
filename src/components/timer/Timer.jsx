@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import useIsMobile from '../../hooks/useIsMobile';
 import styles from './timer.module.scss';
 
 const Timer = () => {
@@ -6,6 +7,10 @@ const Timer = () => {
     const [hours, setHours] = useState('00');
     const [minutes, setMinutes] = useState('00');
     const [seconds, setSeconds] = useState('00');
+    const [formatDay, setFormatDay] = useState('Days');
+    const [formatHour, setFormatHour] = useState('Hours');
+    const [formatMinutes, setFormatMinutes] = useState('Minutes');
+    const [formatSeconds, setFormatSeconds] = useState('Seconds');
 
     let interval;
 
@@ -30,11 +35,34 @@ const Timer = () => {
                 setSeconds(seconds);
             }
         })
+
+        if(deadline < new Date()) {
+            const alarm = new Audio();
+            alarm.src = 'https://audiokaif.ru/wp-content/uploads/2022/02/1-Звук-электронного-будильника-1.mp3';
+            alarm.autoplay = true;
+        }
     }
 
     useEffect(() => {
         startTimer();
     })
+
+    const isMobile = useIsMobile();
+
+    useEffect(() => {
+        isMobile ? console.log('Mobile version') : console.log('Desctop version');
+        if(isMobile) {
+            setFormatDay('DD');
+            setFormatHour('HH');
+            setFormatMinutes('MM');
+            setFormatSeconds('SS');
+        } else {
+            setFormatDay('Days');
+            setFormatHour('Hours');
+            setFormatMinutes('Minutes');
+            setFormatSeconds('Seconds');
+        }
+    }, [isMobile])
 
     return (
         <div className={styles.timer}>
@@ -56,10 +84,10 @@ const Timer = () => {
                 </div>
             </div>
             <div className={styles.timer__nameWrapper}>
-                <p className={styles.timer__name}>Days</p>
-                <p className={styles.timer__name}>Hours</p>
-                <p className={styles.timer__name}>Minutes</p>
-                <p className={styles.timer__name}>Seconds</p>
+                <p className={styles.timer__name}>{formatDay}</p>
+                <p className={styles.timer__name}>{formatHour}</p>
+                <p className={styles.timer__name}>{formatMinutes}</p>
+                <p className={styles.timer__name}>{formatSeconds}</p>
             </div>
         </div>
     )

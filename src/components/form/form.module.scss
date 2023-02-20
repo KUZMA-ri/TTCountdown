@@ -26,9 +26,18 @@
         border: none;
         background-color: var(--bg-red);
         border-radius: 50%;
+        transition: all 0.3s;
 
         &:disabled {
             opacity: 0.7;
+        }
+
+        &:hover:disabled {
+            box-shadow: 0 0 0 0 0;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.66);
         }
     }
 }

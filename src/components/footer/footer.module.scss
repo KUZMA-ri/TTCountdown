@@ -9,4 +9,27 @@
     justify-content: center;
     align-items: center;
     min-height: 192px;
+
+    &__linkDown {
+        color: var(--text-white);
+        font-family: var(--font-Poppins);
+        font-style: normal;
+        font-weight: 400;
+        font-size: var(--fs-20);
+        line-height: 150%;
+        position: absolute;
+        right: 10%;
+
+        &::after {
+            content: url('../../images/arrow.svg');
+            margin-left: 15px;
+            transform: rotate(90deg);
+            position: absolute;
+            transition: all 0.8s;
+        }
+
+        &:hover::after {
+            transform: rotate(270deg);
+        }
+    }
 }

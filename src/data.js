@@ -12,7 +12,7 @@ export const data = [
         number: '02',
         text: 'Мafia party',
         date: '13.02.2023',
-        image: require("./images/accordion/1.jpg"),
+        image: require("./images/accordion/2.jpg"),
     },
 
     {
@@ -20,7 +20,7 @@ export const data = [
         number: '03',
         text: 'Party',
         date: '13.02.2023',
-        image: require("./images/accordion/1.jpg"),
+        image: require("./images/accordion/3.jpg"),
     },
 
     {
@@ -28,7 +28,7 @@ export const data = [
         number: '04',
         text: 'Party on the beach',
         date: '13.02.2023',
-        image: require("./images/accordion/1.jpg"),
+        image: require("./images/accordion/4.jpg"),
     },
 
     {
@@ -36,7 +36,7 @@ export const data = [
         number: '05',
         text: 'Home Security',
         date: '13.02.2023',
-        image: require("./images/accordion/1.jpg"),
+        image: require("./images/accordion/5.jpg"),
     },
 
     {
@@ -44,7 +44,7 @@ export const data = [
         number: '06',
         text: 'Network Design & Implementation',
         date: '13.02.2023',
-        image: require("./images/accordion/1.jpg"),
+        image: require("./images/accordion/6.jpg"),
     },
 
     {
@@ -52,7 +52,7 @@ export const data = [
         number: '07',
         text: 'System Design & Engineering',
         date: '13.02.2023',
-        image: require("./images/accordion/1.jpg"),
+        image: require("./images/accordion/7.jpg"),
     },
 
     {
@@ -60,7 +60,7 @@ export const data = [
         number: '08',
         text: 'Client Care Plans',
         date: '13.02.2023',
-        image: require("./images/accordion/1.jpg"),
+        image: require("./images/accordion/8.jpg"),
     },
 
 ]
