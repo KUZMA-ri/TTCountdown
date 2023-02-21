@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const mobileSize = 768;
+const mobileSize = 769;
 
 const useIsMobile = () => {      
     const [mobile, setMobile] = useState(null);

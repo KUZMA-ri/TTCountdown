@@ -9,6 +9,23 @@
     justify-content: center;
     align-items: center;
     min-height: 192px;
+    margin-top: auto;
+
+    @media (max-width: 1200px) {
+        min-height: 160px;
+    }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 560px) {
+        padding: 30px;    
+    }
 
     &__linkDown {
         color: var(--text-white);
@@ -30,6 +47,18 @@
 
         &:hover::after {
             transform: rotate(270deg);
+        }
+
+        @media (max-width: 1200px) {
+            font-size: var(--fs-18);
+        }
+
+        @media (max-width: 992px) {
+            position: static;
+        }
+
+        @media (max-width: 560px) {
+            height: 141px;
         }
     }
 }

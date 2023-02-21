@@ -21,7 +21,7 @@ const Form = ({setModalActive, sendStatus, setSendStatus, setSuccessModal}) => {
         } else {
             setSuccessModal(false);
         }
-    });
+    }, [emailError, sendStatus]);
     
     const blurHandler = (e) => {                        // при покидании курсора с поля ввода
         setEmailInvalid(true)

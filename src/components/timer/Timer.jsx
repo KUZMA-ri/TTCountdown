@@ -43,14 +43,15 @@ const Timer = () => {
         }
     }
 
-    useEffect(() => {
-        startTimer();
-    })
+    // startTimer();
 
     const isMobile = useIsMobile();
 
+    // useEffect(() => {
+    //     startTimer();
+    // });
+
     useEffect(() => {
-        isMobile ? console.log('Mobile version') : console.log('Desctop version');
         if(isMobile) {
             setFormatDay('DD');
             setFormatHour('HH');
@@ -69,25 +70,23 @@ const Timer = () => {
             <div className={styles.timer__timeWrapper}>
                 <div className={styles.timer__daysWrap}>
                     <h2 className={styles.timer__time}>{days < 10 ? `0${days}`: days}</h2>
-                    <span className={styles.timer__colon}> : </span>
+                    <p className={styles.timer__name}>{formatDay}</p>
                 </div>
+                    <span className={styles.timer__colon}> : </span>
                 <div className={styles.timer__hoursWrap}>
                     <h2 className={styles.timer__time}>{hours < 10 ? `0${hours}` : hours}</h2>
-                    <span className={styles.timer__colon}> : </span>
+                    <p className={styles.timer__name}>{formatHour}</p>
                 </div>
+                    <span className={styles.timer__colon}> : </span>
                 <div className={styles.timer__minutesWrap}>
                     <h2 className={styles.timer__time}>{minutes < 10 ? `0${minutes}` : minutes}</h2>
-                    <span className={styles.timer__colon}> : </span>
+                    <p className={styles.timer__name}>{formatMinutes}</p>
                 </div>
+                    <span className={styles.timer__colon}> : </span>
                 <div className={styles.timer__secondsWrap}>
                     <h2 className={styles.timer__time}>{seconds < 10 ? `0${seconds}` : seconds}</h2>
+                    <p className={styles.timer__name}>{formatSeconds}</p>
                 </div>
-            </div>
-            <div className={styles.timer__nameWrapper}>
-                <p className={styles.timer__name}>{formatDay}</p>
-                <p className={styles.timer__name}>{formatHour}</p>
-                <p className={styles.timer__name}>{formatMinutes}</p>
-                <p className={styles.timer__name}>{formatSeconds}</p>
             </div>
         </div>
     )

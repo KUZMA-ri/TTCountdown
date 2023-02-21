@@ -8,7 +8,6 @@ const Accordion = () => {
     return (
         <article className={styles.accordion}>
                 { data.map((el) => {
-                    console.log(el.image);
                     return (
                         <div type='radio' key={el.id} id={el.id} className={styles.accordion__item}>
                             <div className={styles.container__content}> 

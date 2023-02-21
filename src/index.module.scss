@@ -31,6 +31,8 @@
     --fs-32: 2em;
     --fs-36: 2.25em;
     --fs-40: 2.5em;
+    --fs-44: 2.75em;
+    --fs-52: 3.25em;
     --fs-72: 4.5em;
 
     --font-Poppins: 'Poppins', sans-serif;
@@ -69,20 +71,19 @@ li {
 
 // ----------------------------------------------------------------------------------
 /* lg */
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
 
 }
 /* md */
-@media (max-width: 992px){
+@media (max-width: 992px) {
 
 
 }
 /* sm */
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
 }
 /* xs */
-@media (max-width: 560px){
+@media (max-width: 560px) {
 
-    
 }

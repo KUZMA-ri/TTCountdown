@@ -15,6 +15,20 @@
         border-radius: 40px;
         padding: 16px 5px 16px 27px;
         min-width: 440px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            min-width: 360px;
+        }
+
+        @media (max-width: 560px) {
+            width: 90%;
+            padding: 16px 5px 16px 20px;
+            font-size: var(--fs-14);
+        }
     }
 
     &__btn {
@@ -38,6 +52,12 @@
 
         &:hover {
             box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.66);
+        }
+
+        @media (max-width: 768px) {
+            width: 33px;
+            height: 33px;
+            transform: translateX(-141%) translateY(29%);
         }
     }
 }
