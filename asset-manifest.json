@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TTCountdown/static/css/main.312df74f.css",
-    "main.js": "/TTCountdown/static/js/main.71661646.js",
+    "main.css": "/TTCountdown/static/css/main.c09a2c17.css",
+    "main.js": "/TTCountdown/static/js/main.175b6b43.js",
     "static/media/1.jpg": "/TTCountdown/static/media/1.636ba6a57c9bd81d5027.jpg",
     "static/media/SFPRODISPLAYMEDIUM.OTF": "/TTCountdown/static/media/SFPRODISPLAYMEDIUM.b85d841dacb040b84951.OTF",
     "static/media/2.jpg": "/TTCountdown/static/media/2.463b68770ed7d1627111.jpg",
@@ -21,11 +21,11 @@
     "static/media/red-wave-desctop.svg": "/TTCountdown/static/media/red-wave-desctop.881c965e4d9f6f59075e.svg",
     "static/media/red-wave-mobile.svg": "/TTCountdown/static/media/red-wave-mobile.1510cf47c1ed68abea2e.svg",
     "static/media/arrow.svg": "/TTCountdown/static/media/arrow.f4b8dd330175e90f2148048ecf0f0289.svg",
-    "main.312df74f.css.map": "/TTCountdown/static/css/main.312df74f.css.map",
-    "main.71661646.js.map": "/TTCountdown/static/js/main.71661646.js.map"
+    "main.c09a2c17.css.map": "/TTCountdown/static/css/main.c09a2c17.css.map",
+    "main.175b6b43.js.map": "/TTCountdown/static/js/main.175b6b43.js.map"
   },
   "entrypoints": [
-    "static/css/main.312df74f.css",
-    "static/js/main.71661646.js"
+    "static/css/main.c09a2c17.css",
+    "static/js/main.175b6b43.js"
   ]
 }
