@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
 import Promo from "./sections/promo/Promo";
 import Events from "./sections/events/Events";
 

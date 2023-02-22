@@ -53,6 +53,10 @@
         box-shadow:0 5px 10px #ffffff;
         transform: scale(1.1) translateY(-5px);
     }
+
+    @media (max-width: 768px) {
+        font-size: var(--fs-16);
+    }
 }
 
 @keyframes animation1 {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from '../../data';
+import { data } from '../../utils/data';
 import AccordionItem from './AccordionItem';
 import styles from './accordion.module.scss';
 

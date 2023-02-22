@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import OutlineBtn from '../buttons/OutlineBtn';
 import styles from './accordion.module.scss';
 
@@ -21,7 +22,9 @@ const AccordionItem = ({ id, text, date, image, toggle, opened }) => {
                         <div className={styles.accordion__content}>
                             <h3 className={styles.accordion__title}>{text}</h3>
                             <p className={styles.accordion__eventDate}>{date}</p>
-                            <OutlineBtn text='More information'/>
+                            <Link to={'https://afisha.me/film/'}>
+                                <OutlineBtn text='More information'/>
+                            </Link>
                         </div>
                     </div>
                 </div>

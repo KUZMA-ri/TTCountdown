@@ -43,13 +43,9 @@ const Timer = () => {
         }
     }
 
-    // startTimer();
+    startTimer();
 
     const isMobile = useIsMobile();
-
-    // useEffect(() => {
-    //     startTimer();
-    // });
 
     useEffect(() => {
         if(isMobile) {

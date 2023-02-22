@@ -22,12 +22,14 @@ const Form = ({setModalActive, sendStatus, setSendStatus, setSuccessModal}) => {
             setSuccessModal(false);
         }
     }, [emailError, sendStatus]);
+
     
-    const blurHandler = (e) => {                        // при покидании курсора с поля ввода
+    const blurHandler = (e) => {                        
         setEmailInvalid(true)
     }
 
-    const emailHandler = ((e) => {                      // валидация
+
+    const emailHandler = ((e) => {                      
         const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
         if ((e.target.value).length === 0) {
@@ -42,8 +44,9 @@ const Form = ({setModalActive, sendStatus, setSendStatus, setSuccessModal}) => {
 
         setEmail(e.target.value);
     })
+    
 
-    const sendEmail = (e) => {                                          // отправка email                                              
+    const sendEmail = (e) => {                                                                                   
         e.preventDefault();
         const randomID = Math.floor(Math.random() * 1000);
 

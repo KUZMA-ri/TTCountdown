@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import PrimaryBtn from '../../components/buttons/PrimaryBtn';
+
 import Title from '../../components/title/Title';
+import Modal from '../../components/modal/Modal';
 import Timer from '../../components/timer/Timer';
 import Footer from '../../components/footer/Footer';
-import Modal from '../../components/modal/Modal';
-import LogoIcon  from '../../images/logo/logo-icon.svg';
+import PrimaryBtn from '../../components/buttons/PrimaryBtn';
+
+import LogoIcon from '../../images/logo/logo-icon.svg';
 import LogoName from '../../images/logo/logo-name.svg';
 import LeftWave from '../../images/waves/wave-left.png';
 import RightWave from '../../images/waves/wave-right.png';
+
 import styles from './promo.module.scss';
 
 const Promo = () => {
@@ -39,7 +42,10 @@ const Promo = () => {
                         </div>
                     </Link>
                     <div className={styles.promo__content}>
-                        <Title title='Under Construction' desc={desc}/>
+                        <Title 
+                            title='Under Construction' 
+                            desc={desc}
+                        />
                     </div>
                     <Timer />
                     <div className={styles.promo__btnWrapper}>
