@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PrimaryBtn from '../../components/buttons/PrimaryBtn';
 import Title from '../../components/title/Title';
 import Timer from '../../components/timer/Timer';
@@ -30,12 +31,13 @@ const Promo = () => {
                     <img className={styles.promo__leftWave} src={LeftWave} alt="image wave" />
                     <img className={styles.promo__rightWave} src={RightWave} alt="image wave" />
                 </div>
-                <div className={styles.promo__contentWrapper}>
-                    {/* Link to url----------------------------------------------------------------------TO DO*/}                          
-                    <div className={styles.promo__logo}>
-                        <img className={styles.promo__logoIcon} src={LogoIcon} alt="icon" />
-                        <img className={styles.promo__logoName} src={LogoName} alt="lead advisors" />
-                    </div>
+                <div className={styles.promo__contentWrapper}>                         
+                    <Link to={'/TTCountdown'}>
+                        <div className={styles.promo__logo}>
+                            <img className={styles.promo__logoIcon} src={LogoIcon} alt="icon" />
+                            <img className={styles.promo__logoName} src={LogoName} alt="lead advisors" />
+                        </div>
+                    </Link>
                     <div className={styles.promo__content}>
                         <Title title='Under Construction' desc={desc}/>
                     </div>
@@ -44,7 +46,9 @@ const Promo = () => {
                         <div>
                             <p className={styles.promo__descBtn}>Check our event page when you wait:</p>
                         </div>
-                        <PrimaryBtn text='Go to the event'/>
+                        <Link to={'https://afisha.me/film/'}>
+                            <PrimaryBtn text='Go to the event'/>
+                        </Link>
                     </div>
                 </div>
             </div>

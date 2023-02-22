@@ -1,3 +1,4 @@
+import Scroll from 'react-scroll-to-element';
 import Form from '../form/Form';
 import styles from './footer.module.scss';
 
@@ -10,7 +11,10 @@ const Footer = ({setModalActive, sendStatus, setSendStatus, setSuccessModal}) =>
                 setSendStatus={setSendStatus}
                 setSuccessModal={setSuccessModal}
             />
-            <a className={styles.footer__linkDown}>Other Events</a>
+
+            <Scroll type="id" element="events">
+                <a className={styles.footer__linkDown}>Other Events</a>
+            </Scroll>
         </div>
     )
 }

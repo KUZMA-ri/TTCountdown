@@ -1,179 +1,127 @@
-.accordion{
-	max-width: 1700px;
-	height: 682px;
-	margin: 0 auto;
+.accordion {
+    max-width: 1700px;
+    height: 682px;
+	margin: 48px auto 0px auto;
+    display: flex;
 
-	&__title {
-		position: absolute;
-		font-family: 'SFProDisplay';
-		line-height: 100%;
-		min-width: 500px;
-		bottom: 40px;
-		left: 0%;
-		text-indent: 1em;
-		padding: 0;
-		margin: 0;
-		color: #ddd;
-		transform-origin: 0 0;
-		transform: rotate(-90deg);
-		transition: all 1s ease;
-	}
-	&__numItem {
-		position: absolute;
-		bottom: 20px;
-		left: 21%;
-		font-family: 'SF Pro Display';
-		font-style: normal;
-		font-weight: 500;
-		font-size: 40px;
-		line-height: 100%;
-		text-align: right;
-		letter-spacing: -0.03em;
-		color: #FFFFFF;
-	}
+    &__item {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%);
+        transition: all 1s;
+    }
 
-	&__link {
-		font-family: 'SFProDisplay';
-		display: block;
-		font-size: var(--fs-32);
-		width: 100%;
-		line-height: 2em;
-		text-decoration: none;
-		color: inherit;
-		outline: 0 none;
-	}
+    &__itemLink {
+        width: 85px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border: 2px solid rgb(255, 255, 255);
+        padding: 5px 10px;
+        z-index: 5;
+        transition: all 1s;
 
-	&__btn {
-		transform: rotate(-90deg);
-		display: none;
-		transition: all 1s ease;
-	}
+        @media (max-width: 1700px) {
+            width: 65px;
+        }
+    }
 
-	&__pic {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		object-fit: cover;
-	}
+    &__pic {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
 
-	&__item{
-		background-position: center;
-		position: relative;
-		display: block;
-		float: left;
-		width: 65px;
-		height: 680px;
-		margin: 4px;
-		color: #333;
-		overflow: hidden;
-		border-radius: 3px;
-		transition: all 1s ease;
+    &__titleLinkItem {
+        font-family: 'SFProDisplay';
+        font-weight: 600;
+        font-size: var(--fs-32);
+        line-height: 100%;
+        color: var(--text-white);
+        transform: rotate(-90deg);
+        position: absolute;
+        min-width: 500px;
+        bottom: 50%;
+    }
 
-		&:target {
-			width: 995px;
+    &__numLinkItem {
+        font-family: 'SFProDisplay';
+        font-weight: 500;
+        font-size: var(--fs-40);
+        line-height: 100%;
+        text-align: right;
+        letter-spacing: -0.03em;
+        color: var(--text-white);
+        position: absolute;
+        bottom: 20px;
+        margin-top: 40px;
+        left: 10%;
+    }
 
-			&:nth-child(1) {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/1.jpg') no-repeat center;
-				background-size: cover;
-			}
+    &__itemHidden {
+        position: relative;
+        min-width: 935px;
+        display: flex;
+        align-items: end;
+        transition: all 1s;
 
-			&:nth-child(2) {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/2.jpg') no-repeat center;
-				background-size: cover;
-			}
+        @media (max-width: 1700px) {
+            min-width: 860px;
+        }
 
-			&:nth-child(3) {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/3.jpg') no-repeat center;
-				background-size: cover;
-			}
+        @media (max-width: 1440px) {
+            min-width: 670px;
+        }
+    }
 
-			&:nth-child(4) {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/4.jpg') no-repeat center;
-				background-size: cover;
-			}
+    &__contentWrapper {
+        width: 55%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 50px 40px;
+        background: rgba(18, 18, 18, 0.8);
+        backdrop-filter: blur(20px);
+        opacity: 0.96;
+    }
 
-			&:nth-child(5) {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/5.jpg') no-repeat center;
-				background-size: cover;
-			}
+    &__num {
+        position: absolute;
+        font-family: 'SFProDisplay';
+        font-weight: 600;
+        font-size: 380px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: rgba(255, 255, 255, 0.04);
+        top: -6%;
+        left: -25%;
+        z-index: -1;
+    }
 
-			&:nth-child(6) {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/6.jpg') no-repeat center;
-				background-size: cover;
-			}
+    &__title {
+        font-family: 'SFProDisplay';
+        font-weight: 600;
+        font-size: var(--fs-24);
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+    }
 
-			&:nth-child(7)  {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/7.jpg') no-repeat center;
-				background-size: cover;
-			}
+    &__eventDate {
+        font-family: 'SFProDisplay';
+        font-size: var(--fs-18);
+        line-height: 150%;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 25px;
+    }
 
-			&:nth-child(8) {
-				background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/8.jpg') no-repeat center;
-				background-size: cover;
-			}
-		}
-
-		&:target .accordion__btn {
-			position: static;
-			display: block;
-			transform: rotate(0deg);
-		}
-
-		&:target div {
-			position: static;
-			font-size: 1.3em;
-			text-indent: 0;
-			color: #333;
-			transform: rotate(0deg);
-		}
-
-		&:target  .container__content {
-			background-color: #fff;
-			width: 364px;
-			height: 100%;
-			padding: 0 1rem;
-			background: rgba(18, 18, 18, 0.8);
-			backdrop-filter: blur(20px);
-		}
-
-		&:nth-child(1){
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/1.jpg') no-repeat center;
-			background-size: cover;
-		}
-
-		&:nth-child(2) {
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/2.jpg') no-repeat center;
-			background-size: cover;
-		}
-
-		&:nth-child(3) {
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/3.jpg') no-repeat center;
-			background-size: cover;
-		}
-
-		&:nth-child(4) {
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/4.jpg') no-repeat center;
-			background-size: cover;
-		}
-
-		&:nth-child(5) {
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/5.jpg') no-repeat center;
-			background-size: cover;
-		}
-
-		&:nth-child(6) {
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/6.jpg') no-repeat center;
-			background-size: cover;
-		}
-
-		&:nth-child(7) {
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/7.jpg') no-repeat center;
-			background-size: cover;
-		}
-
-		&:nth-child(8) {
-			background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%), url('../../images/accordion/8.jpg');
-		}
-	}
+    &__content {
+        padding: 5px;
+    }
 }

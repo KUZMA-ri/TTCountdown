@@ -43,7 +43,7 @@ const Timer = () => {
         }
     }
 
-    startTimer();
+    // startTimer();
 
     const isMobile = useIsMobile();
 

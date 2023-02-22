@@ -1,34 +1,23 @@
 import React, { useState } from 'react';
 import { data } from '../../data';
+import AccordionItem from './AccordionItem';
 import styles from './accordion.module.scss';
 
 const Accordion = () => {
-    const [activeAccordionItem, setActiveAccordionItem] = useState(false);
-
+    const [opened, setOpened] = useState(0);
+    
     return (
-        <article className={styles.accordion}>
-                { data.map((el) => {
-                    return (
-                        <div type='radio' key={el.id} id={el.id} className={styles.accordion__item}>
-                            <div className={styles.container__content}> 
-                                <div className={styles.accordion__titleWrapper}>
-                                    <p className={styles.accordion__numItem}>{`0${el.id}`}</p>
-                                    <div className={styles.accordion__title}>
-                                        <a className={styles.accordion__link} href={`#${el.id}`}>
-                                            {el.text}
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <p className={styles.accordion__text}>This content appears on page 1.</p>
-                                <button className={styles.accordion__btn}>More Information</button>
-                            </div>
-                                <img className={styles.accordion__pic} src={el.image} alt="" style={{position: 'absolute', left: '15px', zIndex: '-1'}}/>
-                        </div>
-                    )
-                })}
-        </article>
+        <div className={styles.accordion}>
+            {data.map ((el, i) => {
+                return (
+                    <AccordionItem 
+                        key={el.id}
+                        {...el} 
+                        opened={i === opened}
+                        toggle={setOpened.bind(null, i === opened ? null : i)} />
+                )
+            })}
+        </div>
     )
 }
-
 export default Accordion;

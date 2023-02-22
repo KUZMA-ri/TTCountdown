@@ -62,5 +62,4 @@ export const data = [
         date: '13.02.2023',
         image: require("./images/accordion/8.jpg"),
     },
-
 ]
